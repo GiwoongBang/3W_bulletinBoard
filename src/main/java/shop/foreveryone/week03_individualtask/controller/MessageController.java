@@ -21,6 +21,7 @@ public class MessageController {
     @PostMapping("/api/messages")
     public Message CreateMessage(@RequestBody MessageRequestDto requestDto) {
         Message message = new Message(requestDto);
+        System.out.println("작성이 완료되었습니다.");
         return messageRepository.save(message);
     }
 
